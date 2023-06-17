@@ -16,7 +16,7 @@ pipeline {
         }
         stage ("sonarQube scan"){
           steps{
-          withSonarQubeEnv('sonar') {
+          withSonarQubeEnv('sonarQube') {
         sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Delly2_geolocation1'    
           }  
           }
