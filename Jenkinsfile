@@ -14,7 +14,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Delly2/maven-test.git'
             }
         }
-        stage ("Sonarqube scan"){
+        stage ("sonarQube scan"){
           steps{
           withSonarQubeEnv('sonar') {
         sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Delly2_geolocation1'    
